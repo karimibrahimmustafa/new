@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Folder Preview Ideas | Codrops</title>
+		<meta name="description" content="Some ideas for interacting, previewing or just playing with folders on hover" />
+		<meta name="keywords" content="folder, preview, effect, ui, hover, web design, concept, animation" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script>
+			document.documentElement.className = 'js';
+			var supportsCssVars = function() {
+				var s = document.createElement('style'),
+				support;
+
+				s.innerHTML = "root: { --tmp-var: bold; }";
+				document.head.appendChild(s);
+				support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+				s.parentNode.removeChild(s);
+				return support;
+			}
+			if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+		</script>
+	</head>
+	<body>
+		
+		<main>
+			
+			<section class="content content--devi">
+				
+				<div class="grid">
+					
+					<div class="grid__item">
+						<div class="folder folder--devi">
+							<div class="folder__icon">
+								<div class="folder__icon-img folder__icon-img--back">
+									<img class="folder" src="img/hi.png"  />
+								</div>
+								<div class="folder__preview folder__preview--thumbs">
+									<img class="folder__thumb" src="img/1.png" />
+									<img class="folder__thumb" src="img/1.png" />
+									<img class="folder__thumb" src="img/1.png" />
+									<img class="folder__thumb" src="img/1.png" />
+									<img class="folder__thumb" src="img/1.png" />
+								</div>
+								<div class="folder__icon-img folder__icon-img--cover">
+									<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
+									<svg class="folder__icon-svg folder__icon-svg--deco"><use xlink:href="#icon-users"></use></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div><!-- /grid-->
+			</section>
+		
+		</main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/charming.min.js"></script>
+        		<script src="js/main.js"></script>
+
+		<script>
+		(function() {
+			new DeviFx(document.querySelector('.content--devi .folder--devi'));
+			
+		})();
+		</script>
+	</body>
+</html>
